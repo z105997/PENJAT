@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            function cargar() {
+                document.getElementById("a0").hidden = true;
+                window.alert("La pagina ha cargado y ahorcado 0 se ha ocultado");
+            }
+            function pasa() {
+                document.getElementById("a1").hidden = true;
+                window.alert("Has pasado por encima de ahorcado 1 y  se ha ocultado");
+            }
+            function clicar() {
+                document.getElementById("a2").hidden = true;
+                window.alert("Has clickado encima de ahoracado 2 y se ha ocultado");
+            }
+            function doble() {
+                document.getElementById("a3").hidden = true;
+                window.alert("Has echo doble click dsobre ahorcado 3 y se ha ocultado");
+            }            
+        </script>
+    </head>
+    <body onload="cargar();">
+        <img id="a0" src="img/ahorcado_0.png" alt="ahorcado1" style="width: 300px; height: 295px;"/>
+        <img id="a1" src="img/ahorcado_1.png" alt="ahorcado2" style="width: 300px; height: 295px;" onmouseover="pasa()"/>
+        <img id="a2" src="img/ahorcado_2.png" alt="ahorcado3" style="width: 300px; height: 295px;" onclick="clicar()"/>
+        <img id="a3" src="img/ahorcado_3.png" alt="ahorcado4" style="width: 300px; height: 295px;" ondblclick="doble()"/>
+        <img id="a4" src="img/ahorcado_4.png" alt="ahorcado5" style="width: 300px; height: 295px;" />
+        <img id="a5" src="img/ahorcado_5.png" alt="ahorcado6" style="width: 300px; height: 295px;"/>
+        <img id="a6" src="img/ahorcado_6.png" alt="ahorcado7" style="width: 300px; height: 295px;"/>
+    </body>
+</html>

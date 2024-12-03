@@ -10,12 +10,19 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script>
             var vidas = 7;
-            function myfunction() {
+            var palabra ="";
+            function comprovador() {
                 lletra = document.getElementById("l").value;
                 lletra = lletra.toLowerCase();
                 if ((lletra >= "a") && (lletra <= "m")) {
                   window.alert("has encertat");
-                } else {
+                  document.getElementById("palabra").innerHTML = 
+                        palabra = palabra + lletra + " ";;
+                }
+                if (txt.length(14))
+                    window.alert("has ganado"),
+                    paratodo();
+                else {
                   window.alert("has fallat");
                   vidas = vidas - 1;
                 }
@@ -37,15 +44,16 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
         <form>
             <input type="text" id="l" name="lletra" maxlength="1"
             placeholder="Escriu una lletra en minuscules"> 
-            <button type="button" id="comprovar" onclick="myfunction();"> Comprovar</button>
+            <button type="button" id="comprovar" onclick="comprovador();"> Comprovar</button>
         </form> 
         <h2>PARAULA</h2>
-        <div> id="letras"><strong>_ _ _ _ _ _ _</strong><br>
+        <div id="palabra"><strong>_ _ _ _ _ _ _</strong><br></div>
         <h2>VIDES</h2>
         <div id="vidas"><strong>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp_</strong></div>
         <br>
         <h2>Lletres</h2>
-        <a>_ _ _ _ _ _ _</a><br><br>
+        <div id="letras"><strong>_ _ _ _ _ _ _</strong></div>
+        <br><br>
         <h4>
             <a>Credits</a><a href="https://prosselloe.wordpress.com/2022/11/22/el-joc-del-penjat-on-scratch/">El joc del penjat on Scrach</a>
         </h4>

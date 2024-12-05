@@ -8,7 +8,7 @@
             function comprovador() {
                 lletra = document.getElementById("l").value;
                 lletra = lletra.toLowerCase();
-                if ((lletra >= "a") && (lletra <= "m")) {
+                if ((lletra >= "a") && (lletra <= "m") || (lletra === "ç")) {
                   window.alert("has encertat");
                   document.getElementById("palabra").innerHTML = 
                         palabra = palabra + lletra + " ";

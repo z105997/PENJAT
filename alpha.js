@@ -8,15 +8,39 @@
             function comprovador() {
                 lletra = document.getElementById("l").value;
                 lletra = lletra.toLowerCase();
+                switch(lletra) {
+                    case "á":
+                    case "à":
+                        lletra = "a";
+                        break;
+                    case "é":
+                    case "è":
+                        lletra = "e";
+                        break;
+                    case "í":
+                    case "ï":
+                        lletra = "i";
+                        break;
+                    case "ó":
+                    case "ò":
+                        lletra = "o";
+                        break;
+                    case "ú":
+                    case "ü":
+                        lletra = "u";
+                        break;
+                }
                 if ((lletra >= "a") && (lletra <= "m") || (lletra === "ç")) {
                   window.alert("has encertat");
                   document.getElementById("palabra").innerHTML = 
                         palabra = palabra + lletra + " ";
-                } else {
+                } else if ((lletra >= "n") && (lletra <= "z") || (lletra === "ñ")) {
                   window.alert("has fallat");
                   vidas = vidas - 1;
                   document.getElementById("fallo").innerHTML = 
                         fallo = fallo + lletra + " ";
+                } else {
+                    window.alert("Caracter Incorrecto");
                 }
                 if (vidas <= 0) {
                   window.alert("Has perido");

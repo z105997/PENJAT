@@ -30,7 +30,7 @@
                         lletra = "u";
                         break;
                 }
-                if ((lletra >= "a") && (lletra <= "m") || (lletra === "ç")) {
+                if ((lletra >= "a") && (lletra <= "m") || (lletra === "ç") || (lletra === "·") || (lletra === "-")) {
                   window.alert("has encertat");
                   document.getElementById("palabra").innerHTML = 
                         palabra = palabra + lletra + " ";
@@ -39,6 +39,8 @@
                   vidas = vidas - 1;
                   document.getElementById("fallo").innerHTML = 
                         fallo = fallo + lletra + " ";
+                } else if (lletra === "") {
+                    window.alert("Por favor introduce un caracter");
                 } else {
                     window.alert("Caracter Incorrecto");
                 }

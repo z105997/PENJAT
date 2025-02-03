@@ -8,23 +8,42 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
         <title>alpha</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="alpha.js" type="text/javascript"></script>
+        <script src="js/alpha.js" type="text/javascript"></script>
+        <link href="css/alpha.css" rel="stylesheet" type="text/css"/>
     </head>
-    <body>
-        <h1>PROTOTIP JOC DEL PENJAT</h1>
+    <body onload="cargar();" style="background-image: url('img/Desert.png'); background-size: 640px 480px; background-repeat: no-repeat;">
+        <h1>ALPHA JOC DEL PENJAT</h1>
         <form>
             <input type="text" id="l" name="lletra" maxlength="1"
-            placeholder="Escriu una lletra en minuscules"> 
+            placeholder="Escriu una lletra en minusculees"> 
             <button type="button" id="comprovar" onclick="comprovador();"> Comprovar</button>
         </form> 
         <h2>PARAULA</h2>
         <div id="palabra">_ _ _ _ _ _ _<br></div>
         <h2>VIDES</h2>
         <div id="vidas">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp_</div>
-        <br>
-        <h2>Lletres</h2>
+        <h4 id = "counter">0</h4>
+        <h2>LLETRES</h2>
         <div id="fallo">_ _ _ _ _ _ _</div>
-        <br><br>
+        <br>
+        <div id="banderas">
+            <img id="es" src="img/es.png" alt="esp"/>
+            <img id="ca" src="img/ca.png" alt="cat"/>
+            <img id="fr" src="img/fr.png" alt="fr"/>
+            <img id="gb" src="img/gb.png" alt="gb"/>
+            <img id="it" src="img/it.png" alt="it"/>
+            <img id="de" src="img/de.png" alt="ger"/>
+        </div>
+        <div id="imagenes">
+        <img id="a0" src="img/ahorcado_0.png" alt="ahorcado1" style="width: 280px; height: 270px;"/>
+        <img id="a1" src="img/ahorcado_1.png" alt="ahorcado2" style="width: 280px; height: 270px;"/>
+        <img id="a2" src="img/ahorcado_2.png" alt="ahorcado3" style="width: 280px; height: 270px;"/>
+        <img id="a3" src="img/ahorcado_3.png" alt="ahorcado4" style="width: 280px; height: 270px;"/>
+        <img id="a4" src="img/ahorcado_4.png" alt="ahorcado5" style="width: 280px; height: 270px;"/>
+        <img id="a5" src="img/ahorcado_5.png" alt="ahorcado6" style="width: 280px; height: 270px;"/>
+        <img id="a6" src="img/ahorcado_6.png" alt="ahorcado7" style="width: 280px; height: 270px;"/>
+        <img id="a" src="img/joc penjat.png" alt="easteregg" style="width: 648px; height: 461px;"/>
+        </div>
         <h4>
             <a>Credits</a><a href="https://prosselloe.wordpress.com/2022/11/22/el-joc-del-penjat-on-scratch/">El joc del penjat on Scrach</a>
         </h4>

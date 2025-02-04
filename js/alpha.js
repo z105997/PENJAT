@@ -10,7 +10,7 @@
                     seconds = seconds + 1;
                     document.getElementById("counter").innerHTML = seconds;
 		}
-		setInterval(timer,1000);
+		setInterval(timer,1000);                
             function cargar() {
                 document.getElementById("a0").hidden = true;
                 document.getElementById("a1").hidden = true;
@@ -112,4 +112,4 @@
                    document.getElementById("a0").hidden= false;
                    break; 
             }
-            }
+            }     

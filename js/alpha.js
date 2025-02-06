@@ -19,7 +19,7 @@
                 document.getElementById("a4").hidden = true;
                 document.getElementById("a5").hidden = true;
                 document.getElementById("a6").hidden = true;
-                document.getElementById("a").hidden = true;
+                document.getElementById("flux").hidden = true;
                 if (!confirm("Anam a la quinta forca?")) {
                     document.body.style.backgroundImage = "url('img/fondo1.png')";
             }
@@ -71,8 +71,10 @@
                 } else {
                   if (palabra.length >= 14) {
                       window.alert("Has ganado");
-                      document.getElementById("a").hidden = false;
                       parartodo();
+                      document.body.style.backgroundImage = "url('img/Party.png')";
+                      document.getElementById("imagenes").hidden = true;
+                      document.getElementById("flux").hidden = false;                     
                   } 
               }
                 document.getElementById("vidas").innerHTML =

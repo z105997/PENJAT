@@ -9,6 +9,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this t
 body {
   color: white;
   text-shadow: 2px 2px 4px #000000;
+  background-color: #494949;
 }
 #imagenes {
     position: relative; top:-300px; left:318px;

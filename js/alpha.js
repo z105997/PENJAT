@@ -89,6 +89,7 @@
                       window.alert("Has ganado");
                       parartodo();
                       document.body.style.backgroundImage = "url('img/Party.png')";
+                      document.getElementById("cheer").play();
                       document.getElementById("imagenes").hidden = true;
                       document.getElementById("flux").hidden = false;
                       document.getElementById("moix").hidden = true;

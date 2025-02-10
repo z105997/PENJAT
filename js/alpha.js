@@ -20,8 +20,12 @@
                 document.getElementById("a5").hidden = true;
                 document.getElementById("a6").hidden = true;
                 document.getElementById("flux").hidden = true;
+                document.getElementById("moixr").hidden = true;
+                document.getElementById("moix").hidden = true;
+                document.getElementById("moixc").hidden = true;
                 if (!confirm("Anam a la quinta forca?")) {
                     document.body.style.backgroundImage = "url('img/fondo1.png')";
+                    document.getElementById("mystery").play();
             }
         }
             function comprovador() {
@@ -54,27 +58,41 @@
                   window.alert("has encertat");
                   document.getElementById("palabra").innerHTML = 
                         palabra = palabra + lletra + " ";
+                    document.getElementById("miau").play();
+                    document.getElementById("clock").play();
                 } else if ((lletra >= "n") && (lletra <= "z") || (lletra === "ñ")) {
                   window.alert("has fallat");
                   vidas = vidas - 1;
+                  document.getElementById("boom").play();
+                  document.getElementById("clock").play();
+                  document.getElementById("moix").hidden = false;
                   document.getElementById("fallo").innerHTML = 
                         fallo = fallo + lletra + " ";
                         mostrarimg();
                 } else if (lletra === "") {
                     window.alert("Por favor introduce un caracter");
+                    document.getElementById("clock").play();
                 } else {
                     window.alert("Caracter Incorrecto");
+                    document.getElementById("clock").play();
                 }
                 if (vidas <= 0) {
                   window.alert("Has perido");
+                  document.getElementById("cat_fight").play();
+                  document.getElementById("bell").play();
+                  document.getElementById("moix").hidden = true;
+                  document.getElementById("moixr").hidden = false;
                   parartodo();
+                  document.body.style.backgroundImage = "url('img/Jungle.png')";
                 } else {
                   if (palabra.length >= 14) {
                       window.alert("Has ganado");
                       parartodo();
                       document.body.style.backgroundImage = "url('img/Party.png')";
                       document.getElementById("imagenes").hidden = true;
-                      document.getElementById("flux").hidden = false;                     
+                      document.getElementById("flux").hidden = false;
+                      document.getElementById("moix").hidden = true;
+                      document.getElementById("moixc").hidden = false;
                   } 
               }
                 document.getElementById("vidas").innerHTML =

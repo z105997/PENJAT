@@ -1,0 +1,25 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this template
+*/
+/* 
+    Created on : 27 de gen. 2025, 14:41:07
+    Author     : aula1PTD1
+*/
+body {
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
+  background-color: #494949;
+}
+#imagenes {
+    position: relative; top:-300px; left:318px;
+}
+#banderas {
+    position: relative; top:-335px; left:318px;
+}
+#flux {
+    position: relative; top:-300px; left:318px;
+}
+#gato {
+    position: relative; top:-400px; left:318px;
+}

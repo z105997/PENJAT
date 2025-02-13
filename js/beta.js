@@ -5,6 +5,11 @@
             var vidas = 7;
             var palabra ="";
             var fallo ="";
+            var paraules =["cordes","fetge","forca","jutges","jutjat","mengen","quinta","setze"];
+            var pistes = ["A la quinta forca","Setze jutges d'un jutjat mengen fetge d'un penjat","A ca un penjat, no hi anomenis cordes"];
+            var paraulapista = [1, 2, 3];
+            var aleatorio = Math.floor(Math.random() * paraules.lenght);
+            var paraules
             var seconds = 0;
 		function timer() {
                     seconds = seconds + 1;
@@ -134,3 +139,6 @@
                    break; 
             }
             }     
+            function pistas() {
+                window.alert(aleatorio);
+            }

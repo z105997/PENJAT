@@ -25,8 +25,8 @@
                 document.getElementById("moixc").hidden = true;
                 if (!confirm("Anam a la quinta forca?")) {
                     document.body.style.backgroundImage = "url('img/fondo1.png')";
+		    document.getElementById("mystery").play();
             }
-                document.getElementById("mystery").play();
         }
             function comprovador() {
                 lletra = document.getElementById("l").value;

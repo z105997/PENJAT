@@ -2,20 +2,26 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/javascript.js to edit this template
  */
+        //define las variables globales
             var vidas = 7;
-            var palabra ="";
+            var palabra =[];
             var fallo ="";
-            var paraules =["cordes","fetge","forca","jutges","jutjat","mengen","quinta","setze"];
-            var pistes = ["A la quinta forca","Setze jutges d'un jutjat mengen fetge d'un penjat","A ca un penjat, no hi anomenis cordes"];
-            var paraulapista = [1, 2, 3];
-            var aleatorio = Math.floor(Math.random() * paraules.lenght);
-            var paraules
+            var paraulesca =["cordes","fetge","forca","jutges","jutjat","mengen","quinta","setze"];
+            var pistesca = ["A la quinta forca","Setze jutges d'un jutjat mengen fetge d'un penjat","A ca un penjat, no hi anomenis cordes"];
+            var paraulapista = [1, 2, 0, 2, 2, 2, 1, 0, 2];
+            var aleatori = Math.floor (Math.random() * paraulesca.length);
+            var paraula = paraulesca[aleatori];
+            var pista = pistesca[paraulapista[aleatori]];
+            
+        //crea un contador
             var seconds = 0;
 		function timer() {
                     seconds = seconds + 1;
                     document.getElementById("counter").innerHTML = seconds;
 		}
-		setInterval(timer,1000);                
+		setInterval(timer,1000);
+                
+        //oculta las imagenes al cargar la pagina
             function cargar() {
                 document.getElementById("a0").hidden = true;
                 document.getElementById("a1").hidden = true;
@@ -28,12 +34,20 @@
                 document.getElementById("moixr").hidden = true;
                 document.getElementById("moix").hidden = true;
                 document.getElementById("moixc").hidden = true;
+            //pregunta para saber que fondo poner
                 if (!confirm("Anam a la quinta forca?")) {
                     document.body.style.backgroundImage = "url('img/fondo1.png')";
-                    document.getElementById("mystery").play();
+                document.body.style.display = "block";
             }
         }
-            function comprovador() {
+        
+        //Define la medida de la palabra
+                for (var i = 0; i < paraula.length; i++) {
+                  palabra[i] = "_";
+                }
+                
+        //limpia las variantes que puedan tener las letras
+            function limpiador() {
                 lletra = document.getElementById("l").value;
                 document.getElementById("l").value=""; 
                 lletra = lletra.toLowerCase();
@@ -59,55 +73,72 @@
                         lletra = "u";
                         break;
                 }
-                if ((lletra >= "a") && (lletra <= "m") || (lletra === "ç") || (lletra === "·") || (lletra === "-")) {
+                
+        //comprueva si la letra pertenece a la palabra
+                if (paraula.includes(lletra)) {
                   window.alert("has encertat");
                   document.getElementById("palabra").innerHTML = 
-                        palabra = palabra + lletra + " ";
+            //reproduce sonidos de ganar
                     document.getElementById("miau").play();
                     document.getElementById("clock").play();
-                } else if ((lletra >= "n") && (lletra <= "z") || (lletra === "ñ")) {
+                } else if (!paraula.includes(lletra)) {
                   window.alert("has fallat");
                   vidas = vidas - 1;
+            //reproduce sonidos de perder
                   document.getElementById("boom").play();
                   document.getElementById("clock").play();
                   document.getElementById("moix").hidden = false;
                   document.getElementById("fallo").innerHTML = 
                         fallo = fallo + lletra + " ";
                         mostrarimg();
+            //en caso de que no introduzcas nada
                 } else if (lletra === "") {
                     window.alert("Por favor introduce un caracter");
                     document.getElementById("clock").play();
+            //en caso de que no introduzcas una letra
                 } else {
                     window.alert("Caracter Incorrecto");
                     document.getElementById("clock").play();
                 }
+                
+        //termina el juego segun si gans o pierdes
                 if (vidas <= 0) {
                   window.alert("Has perido");
+            //reproduce sonidos de perdida
                   document.getElementById("cat_fight").play();
                   document.getElementById("bell").play();
+            //oculta la imagen del gato normal y pone la del gato rotando
                   document.getElementById("moix").hidden = true;
                   document.getElementById("moixr").hidden = false;
+            //para el programa y cambia el fondo
                   parartodo();
                   document.body.style.backgroundImage = "url('img/Jungle.png')";
-                } else {
-                  if (palabra.length >= 14) {
+        //en caso de que complete la palabra ha ganado
+                } else if (paraula === palabra) {
                       window.alert("Has ganado");
+            //para el programa y cambia el fondo
                       parartodo();
                       document.body.style.backgroundImage = "url('img/Party.png')";
+            //reproduce sonidos de victoria y osculta y muestra imagenes
                       document.getElementById("cheer").play();
                       document.getElementById("imagenes").hidden = true;
                       document.getElementById("flux").hidden = false;
                       document.getElementById("moix").hidden = true;
                       document.getElementById("moixc").hidden = false;
-                  } 
-              }
+                            } 
+                   
+       //resta las vidas
                 document.getElementById("vidas").innerHTML =
                         "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;" + vidas;
             }
+            
+        //para todo el programa
             function parartodo() {
                 document.getElementById("l").disabled = true;
                 document.getElementById("comprovar").disabled = true;
             }
+            
+        //muestra las imagenes segun las vidas que queden
             function mostrarimg () {
             switch (vidas) {
                 case 6:
@@ -138,7 +169,10 @@
                    document.getElementById("a0").hidden= false;
                    break; 
             }
-            }     
+        }
+        
+        //muestra una pista
             function pistas() {
-                window.alert(aleatorio);
+                window.alert(pista);
+                window.alert(paraula);
             }

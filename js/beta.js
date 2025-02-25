@@ -12,10 +12,6 @@
             var aleatori = Math.floor (Math.random() * paraulesca.length);
             var paraula = paraulesca[aleatori];
             var pista = pistesca[paraulapista[aleatori]];
-        //Define la medida de la palabra
-                for (var i = 0; i < paraula.length; i++) {
-                  palabra[i] = "_";
-                }
         //crea un contador
             var seconds = 0;
 		function timer() {
@@ -23,6 +19,10 @@
                     document.getElementById("counter").innerHTML = seconds;
 		}
 		setInterval(timer,1000);
+        //Define la medida de la palabra
+                for (var i = 0; i < paraula.length; i++) {
+                  palabra[i] = "_";
+                }
         //oculta las imagenes al cargar la pagina
             function cargar() {
                 document.getElementById("a0").hidden = true;
@@ -73,19 +73,27 @@
         //comprueva si la letra pertenece a la palabra
                 if (paraula.includes(lletra)) {
                   window.alert("has encertat");
+                  pos = paraula.indexOf(lletra);
+                  palabra [pos] = lletra;
+                for (var i = pos++; i < paraula.length; i++) {
+                  if (paraula[i] === lletra) 
+                  palabra[i] = lletra;
+                }
+                document.getElementById("palabra").innerHTML = palabra;
             //reproduce sonidos de ganar
                     document.getElementById("miau").play();
                     document.getElementById("clock").play();
                 } else if (!paraula.includes(lletra)) {
                   window.alert("has fallat");
                   vidas = vidas - 1;
+                  
             //reproduce sonidos de perder
                   document.getElementById("boom").play();
                   document.getElementById("clock").play();
                   document.getElementById("moix").hidden = false;
                   document.getElementById("fallo").innerHTML = 
                         fallo = fallo + lletra + " ";
-                        mostrarimg();
+                        mostrarimg();  
                 } else {
                     window.alert("Caracter Incorrecto");
                     document.getElementById("clock").play();

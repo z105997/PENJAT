@@ -12,6 +12,7 @@
             var aleatori = Math.floor (Math.random() * paraulesca.length);
             var paraula = paraulesca[aleatori];
             var pista = pistesca[paraulapista[aleatori]];
+            
         //crea un contador
             var seconds = 0;
 		function timer() {
@@ -19,10 +20,12 @@
                     document.getElementById("counter").innerHTML = seconds;
 		}
 		setInterval(timer,1000);
+                
         //Define la medida de la palabra
                 for (var i = 0; i < paraula.length; i++) {
                   palabra[i] = "_";
                 }
+                
         //oculta las imagenes al cargar la pagina
             function cargar() {
                 document.getElementById("a0").hidden = true;
@@ -37,12 +40,14 @@
                 document.getElementById("moix").hidden = true;
                 document.getElementById("moixc").hidden = true;
                 document.getElementById("palabra").innerHTML = palabra;
+                document.getElementById("fallos").innerHTML = fallo;
             //pregunta para saber que fondo poner
                 if (!confirm("Anam a la quinta forca?")) {
                     document.body.style.backgroundImage = "url('img/fondo1.png')";
                 document.body.style.display = "block";
             }
         }
+        
         //limpia las variantes que puedan tener las letras
             function limpiador() {
                 lletra = document.getElementById("l").value;
@@ -70,6 +75,7 @@
                         lletra = "u";
                         break;
                 }
+                
         //comprueva si la letra pertenece a la palabra
                 if (paraula.includes(lletra)) {
                   window.alert("has encertat");
@@ -77,61 +83,58 @@
                   palabra [pos] = lletra;
                 for (var i = pos++; i < paraula.length; i++) {
                   if (paraula[i] === lletra) 
-                  palabra[i] = lletra;
-                }
+                  palabra[i] = lletra;}
                 document.getElementById("palabra").innerHTML = palabra;
-            //reproduce sonidos de ganar
                     document.getElementById("miau").play();
                     document.getElementById("clock").play();
-                } else if (!paraula.includes(lletra)) {
+                }
+        //en caso de que no este incluida
+                if (!paraula.includes(lletra)) {
                   window.alert("has fallat");
                   vidas = vidas - 1;
-                  
-            //reproduce sonidos de perder
                   document.getElementById("boom").play();
                   document.getElementById("clock").play();
                   document.getElementById("moix").hidden = false;
-                  document.getElementById("fallo").innerHTML = 
-                        fallo = fallo + lletra + " ";
-                        mostrarimg();  
+
                 } else {
                     window.alert("Caracter Incorrecto");
                     document.getElementById("clock").play();
                 }
-        //termina el juego segun si gans o pierdes
+                
+        //termina el juego segun si ganas
                 if (vidas <= 0) {
                   window.alert("Has perido");
-            //reproduce sonidos de perdida
                   document.getElementById("cat_fight").play();
                   document.getElementById("bell").play();
-            //oculta la imagen del gato normal y pone la del gato rotando
                   document.getElementById("moix").hidden = true;
                   document.getElementById("moixr").hidden = false;
-            //para el programa y cambia el fondo
                   parartodo();
                   document.body.style.backgroundImage = "url('img/Jungle.png')";
-        //en caso de que complete la palabra ha ganado
-                } else if (paraula === palabra) {
+                }
+                
+        //en caso de que complete la palabra ha ganado                
+                if (palabra.indexOf("_") === -1) {
                       window.alert("Has ganado");
-            //para el programa y cambia el fondo
                       parartodo();
                       document.body.style.backgroundImage = "url('img/Party.png')";
-            //reproduce sonidos de victoria, osculta y muestra imagenes
                       document.getElementById("cheer").play();
                       document.getElementById("imagenes").hidden = true;
                       document.getElementById("flux").hidden = false;
                       document.getElementById("moix").hidden = true;
                       document.getElementById("moixc").hidden = false;
-                            } 
-       //resta las vidas
+                            }
+                            
+        //resta las vidas
                 document.getElementById("vidas").innerHTML =
                         "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;" + vidas;
             }
+            
         //para todo el programa
             function parartodo() {
                 document.getElementById("l").disabled = true;
                 document.getElementById("comprovar").disabled = true;
             }
+            
         //muestra las imagenes segun las vidas que queden
             function mostrarimg () {
             switch (vidas) {
@@ -164,6 +167,7 @@
                    break; 
             }
         }
+        
         //muestra una pista
             function pistas() {
                 window.alert(pista);

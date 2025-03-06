@@ -6,6 +6,7 @@
             var vidas = 7;
             var palabra = [];
             var fallo = ["_","_","_","_","_","_","_"];
+            var lletres = ["_","_","_","_","_","_","_"];
             var paraulesca =["cordes","fetge","forca","jutges","jutjat","mengen","quinta","setze","penjat"];
             var pistesca = ["A la quinta forca","Setze jutges d'un jutjat mengen fetge d'un penjat","A ca un penjat, no hi anomenis cordes"];
             var paraulapista = [2, 1, 0, 1, 1, 1, 0, 1, 2];
@@ -40,7 +41,6 @@
                 document.getElementById("moix").hidden = true;
                 document.getElementById("moixc").hidden = true;
                 document.getElementById("palabra").innerHTML = palabra;
-                document.getElementById("fallos").innerHTML = fallo;
             //pregunta para saber que fondo poner
                 if (!confirm("Anam a la quinta forca?")) {
                     document.body.style.backgroundImage = "url('img/fondo1.png')";
@@ -77,6 +77,7 @@
                 }
                 
         //comprueva si la letra pertenece a la palabra
+        if ((lletra >= "a") && (lletra <= "z") || (lletra === "ç") || (lletra === "ñ")) {
                 if (paraula.includes(lletra)) {
                   window.alert("has encertat");
                   pos = paraula.indexOf(lletra);
@@ -87,19 +88,27 @@
                 document.getElementById("palabra").innerHTML = palabra;
                     document.getElementById("miau").play();
                     document.getElementById("clock").play();
-                }
+                
         //en caso de que no este incluida
-                if (!paraula.includes(lletra)) {
-                  window.alert("has fallat");
+            }else { if (lletres.indexOf(lletra) !== -1) {
+                  window.alert("letra repetida");
+              }else { 
+                  window.alert("has falldo");
+                  lletres[7 - vidas] = lletra;
                   vidas = vidas - 1;
+                  
+            //cosas
+                  mostrarimg();
+                  document.getElementById("fallo").innerHTML = lletres;
                   document.getElementById("boom").play();
                   document.getElementById("clock").play();
                   document.getElementById("moix").hidden = false;
-
-                } else {
-                    window.alert("Caracter Incorrecto");
-                    document.getElementById("clock").play();
                 }
+                }
+        //en caso de que el caracter no seqa valido
+            }else{
+                window.alert("no válido");
+            }
                 
         //termina el juego segun si ganas
                 if (vidas <= 0) {
@@ -171,5 +180,4 @@
         //muestra una pista
             function pistas() {
                 window.alert(pista);
-                window.alert(paraula);
             }

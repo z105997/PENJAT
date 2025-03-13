@@ -5,27 +5,31 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
 -->
 <html>
     <head>
-        <title>alpha</title>
+        <title>beta</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="js/beta.js" type="text/javascript"></script>
         <link href="css/beta.css" rel="stylesheet" type="text/css"/>
     </head>
-    <body onload="cargar();" style="background-image: url('img/Desert.png'); background-size: 640px 480px; background-repeat: no-repeat;">
-        <h1 translate="no">ALPHA JOC DEL PENJAT</h1>
+    <body onload="cargar();" style="background-image: url('img/Desert.png'); background-size: 768px 576px; background-repeat: no-repeat;">
+        <h1 translate="no">BETA JOC DEL PENJAT</h1>
         <form>
             <input type="text" id="l" name="lletra" maxlength="1"
             placeholder="Escriu una lletra en minusculees"> 
             <button type="button" id="comprovar" onclick="limpiador();"> Comprovar</button>
-        </form> 
-        <h2>PARAULA</h2>
-        <div id="palabra">_ _ _ _ _ _ _&nbsp</div><button type="button" id="pista" onclick="pistas();"> Pista</button>
-        <h2>VIDES</h2>
-        <div id="vidas">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp_</div>
-        <h4 id = "counter">0</h4>
-        <h2>LLETRES</h2>
-        <div id="fallo">_ _ _ _ _ _ _</div>
-        <br>
+        </form>
+        <div id="1rcol">
+            <h2>PARAULA<a href="https://prosselloe.wordpress.com/2015/05/16/vols-sopes-en-record-dels-nostres-padrins/">Demanam Sopes?</a><button type="button" id="pista" onclick="pistas();"> Pista</button></h2>
+            <div id="palabra">_ _ _ _ _ _ _&nbsp</div>
+        </div>
+        <div id="2rcol">
+            <h2>VIDES<a href="https://pccd.dites.cat/p/Tenir_set_vides%2C_com_els_gats">Un moix en té set??</a></h2>
+            <div id="vidas">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp_</div>
+        </div>
+        <div id="3rcol">
+            <h2>LLETRES<a href="https://pccd.dites.cat/p/De_lletres">Ets de lletres?</a></h2>
+            <div id="fallo">_ _ _ _ _ _ _</div>
+        </div>
         <div id="banderas">
             <a href="https://precious--melba--1ebe13-netlify-app.translate.goog/alpha?_x_tr_sl=auto&_x_tr_tl=es&_x_tr_hl=es&_x_tr_pto=wapp"><img id="es" src="img/es.png" alt="esp"/></a>
             <a href="https://precious--melba--1ebe13-netlify-app.translate.goog/alpha?_x_tr_sl=auto&_x_tr_tl=ca&_x_tr_hl=es&_x_tr_pto=wapp"><img id="ca" src="img/ca.png" alt="cat"/></a>
@@ -33,21 +37,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
             <a href="https://precious--melba--1ebe13-netlify-app.translate.goog/alpha?_x_tr_sl=auto&_x_tr_tl=gb&_x_tr_hl=es&_x_tr_pto=wapp"><img id="gb" src="img/gb.png" alt="gb"/></a>
             <a href="https://precious--melba--1ebe13-netlify-app.translate.goog/alpha?_x_tr_sl=auto&_x_tr_tl=it&_x_tr_hl=es&_x_tr_pto=wapp"><img id="it" src="img/it.png" alt="it"/></a>
             <a href="https://precious--melba--1ebe13-netlify-app.translate.goog/alpha?_x_tr_sl=auto&_x_tr_tl=de&_x_tr_hl=es&_x_tr_pto=wapp"><img id="de" src="img/de.png" alt="ger"/></a>
-        </div>
-        <img id="flux" src="img/joc penjat.png" alt="easteregg" style="width: 324px; height: 230px;"/>
-        <div id="imagenes">
-        <img id="a0" src="img/ahorcado_0.png" alt="ahorcado1" style="width: 280px; height: 270px;"/>
-        <img id="a1" src="img/ahorcado_1.png" alt="ahorcado2" style="width: 280px; height: 270px;"/>
-        <img id="a2" src="img/ahorcado_2.png" alt="ahorcado3" style="width: 280px; height: 270px;"/>
-        <img id="a3" src="img/ahorcado_3.png" alt="ahorcado4" style="width: 280px; height: 270px;"/>
-        <img id="a4" src="img/ahorcado_4.png" alt="ahorcado5" style="width: 280px; height: 270px;"/>
-        <img id="a5" src="img/ahorcado_5.png" alt="ahorcado6" style="width: 280px; height: 270px;"/>
-        <img id="a6" src="img/ahorcado_6.png" alt="ahorcado7" style="width: 280px; height: 270px;"/>
-        </div>
-        <div id="gato">
-            <img id="moixc" src="img/caminar.gif" alt="gato_caminando" style="width: 86px; height: 90px;"/>
-            <img id="moixr" src="img/rotar.gif" alt="gato_rotador" style="width: 86px; height: 90px;"/>
-            <img id="moix" src="img/disfraz3.png" alt="gato" style="width: 86px; height: 90px;"/>            
+            <button type="button" id="teclado" onclick="document.getElementById('Teclat').hidden = 
+                                  !document.getElementById('Teclat').hidden;" title="Mostra o Amaga">
+                                  <img src="img/keyboard.png" alt="teclat" style="width: 24px; height: 24px;"/></button>
+            <button type="button" id="mutear" onclick="mute();"><img src="img/mute.png" alt="mute" style="width: 24px; height: 24px;"/></button>
         </div>
         <div id="audio">
             <audio id="bell">
@@ -75,8 +68,97 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
                 <source src="aud/mystery.mp3" type="audio/mpeg">
             </audio>
         </div>
-        <h4>
-            <a>Credits</a><a href="https://prosselloe.wordpress.com/2022/11/22/el-joc-del-penjat-on-scratch/">El joc del penjat on Scrach</a>
-        </h4>
+        <div id="citas1">
+        <h4><a>URL Pistes</a> <a href="https://pccd.dites.cat/p/A_la_quinta_forca">Dita1</a><a href="https://pccd.dites.cat/p/A_ca_un_penjat%2C_no_hi_anomenis_cordes">Dita2</a><a href="https://pccd.dites.cat/p/Setze_jutges_d%27un_jutjat_mengen_fetge_d%27un_penjat">Dita3</a></h4>
+        <h4><a>Credits</a> <a href="https://prosselloe.wordpress.com/2022/11/22/el-joc-del-penjat-on-scratch/">El joc del penjat on Scrach</a></h4>
+        </div>
+        <div id="citas2">
+            <h4><a>Youtube</a> <a href="https://prosselloe.wordpress.com/2022/11/22/el-joc-del-penjat-on-scratch/">El joc del penjat on Scrach</a></h4>
+        <h4><a>Wikis</a> <a href="https://prosselloe.wordpress.com/2022/11/22/el-joc-del-penjat-on-scratch/">El joc del penjat on Scrach</a></h4>
+        </div>
+        <h3 id = "counter">0</h3>
+                <img id="flux" src="img/joc penjat.png" alt="easteregg" style="width: 324px; height: 230px;"/>
+        <div id="imagenes">
+            <img id="a0" src="img/ahorcado_0.png" alt="ahorcado1" style="width: 280px; height: 270px;"/>
+            <img id="a1" src="img/ahorcado_1.png" alt="ahorcado2" style="width: 280px; height: 270px;"/>
+            <img id="a2" src="img/ahorcado_2.png" alt="ahorcado3" style="width: 280px; height: 270px;"/>
+            <img id="a3" src="img/ahorcado_3.png" alt="ahorcado4" style="width: 280px; height: 270px;"/>
+            <img id="a4" src="img/ahorcado_4.png" alt="ahorcado5" style="width: 280px; height: 270px;"/>
+            <img id="a5" src="img/ahorcado_5.png" alt="ahorcado6" style="width: 280px; height: 270px;"/>
+            <img id="a6" src="img/ahorcado_6.png" alt="ahorcado7" style="width: 280px; height: 270px;"/>
+        </div>
+        <div id="gato">
+            <img id="moixc" src="img/caminar.gif" alt="gato_caminando" style="width: 86px; height: 90px;"/>
+            <img id="moixr" src="img/rotar.gif" alt="gato_rotador" style="width: 86px; height: 90px;"/>
+            <img id="moix" src="img/disfraz3.png" alt="gato" style="width: 86px; height: 90px;"/>            
+        </div>
+        <div id="Teclat" translate="no">
+            <table><strong>
+                <tr>
+                  <td>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <button id="q" onclick="document.getElementById('l').value = 'q';">q</button>
+                    <button id="w" onclick="document.getElementById('l').value = 'w';">w</button>
+                    <button id="e" onclick="document.getElementById('l').value = 'e';">e</button>
+                    <button id="r" onclick="document.getElementById('l').value = 'r';">r</button>
+                    <button id="t" onclick="document.getElementById('l').value = 't';">t</button>
+                    <button id="y" onclick="document.getElementById('l').value = 'y';">y</button>
+                    <button id="u" onclick="document.getElementById('l').value = 'u';">u</button>
+                    <button id="i" onclick="document.getElementById('l').value = 'i';">i</button>
+                    <button id="o" onclick="document.getElementById('l').value = 'o';">o</button>
+                    <button id="p" onclick="document.getElementById('l').value = 'p';">p</button>
+                    <!--
+                    <button id="agut" onclick="alert('Sense vocals accentuades!');" 
+                            style="color:red" title="Accent Agut">´</button>
+                    -->
+                    <button id="retro" onclick="Retroces();;" title="BACKSPACE">←</button>
+                  </td>          
+                </tr>
+                <tr>
+                  <td>
+                    &nbsp;&nbsp;
+                    <button id="a" onclick="document.getElementById('l').value = 'a';">a</button>
+                    <button id="s" onclick="document.getElementById('l').value = 's';">s</button>
+                    <button id="d" onclick="document.getElementById('l').value = 'd';">d</button>
+                    <button id="f" onclick="document.getElementById('l').value = 'f';">f</button>
+                    <button id="g" onclick="document.getElementById('l').value = 'g';">g</button>
+                    <button id="h" onclick="document.getElementById('l').value = 'h';">h</button>
+                    <button id="j" onclick="document.getElementById('l').value = 'j';">j</button>
+                    <button id="k" onclick="document.getElementById('l').value = 'k';">k</button>
+                    <button id="l" onclick="document.getElementById('l').value = 'l';">l</button>
+                    <button id="ñ" onclick="document.getElementById('l').value = 'ñ';" 
+                            style="color:blue">ñ</button>
+                    <!--
+                    <button id="dieresi" onclick="alert('Sense vocals amb dièrsi!');" 
+                            style="color:red" title="Dièresi">¨</button>
+                    -->
+                    <button id="intro" onclick="limpiador();" title="ENTER">┘</button>
+                  </td>          
+                </tr>
+                <tr>
+                  <td>
+                    <button id="shift" onclick="alert('Només lletres minúscules!');" 
+                            style="color:red" title="SHIFT">↑</button>
+                    <button id="z" onclick="document.getElementById('l').value = 'z';">z</button>
+                    <button id="x" onclick="document.getElementById('l').value = 'x';">x</button>
+                    <button id="c" onclick="document.getElementById('l').value = 'c';">c</button>
+                    <button id="v" onclick="document.getElementById('l').value = 'v';">v</button>
+                    <button id="b" onclick="document.getElementById('l').value = 'b';">b</button>
+                    <button id="n" onclick="document.getElementById('l').value = 'n';">n</button>
+                    <button id="m" onclick="document.getElementById('l').value = 'm';">m</button>
+                    <button id="ç" onclick="document.getElementById('l').value = 'ç';" 
+                            style="color:blue">ç</button>
+                    <button id="volat" onclick="document.getElementById('l').value = '·';" 
+                            style="color:blue" title="Punt Volat">·</button>
+                    <button id="guio" onclick="document.getElementById('l').value = '-';" 
+                            style="color:blue" title="Guionet">-</button>
+                    <!--
+                    <button id="greu" onclick="alert('Sense vocals accentuades!');" 
+                            style="color:red" title="Accent Greu">`</button>
+                    -->
+                  </td>          
+                </tr>
+            </strong></table>
+        </div>
     </body>
 </html>

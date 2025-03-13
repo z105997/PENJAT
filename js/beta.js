@@ -40,9 +40,10 @@
                 document.getElementById("moixr").hidden = true;
                 document.getElementById("moix").hidden = true;
                 document.getElementById("moixc").hidden = true;
+                document.getElementById("Teclat").hidden = true;
                 document.getElementById("palabra").innerHTML = palabra;
             //pregunta para saber que fondo poner
-                if (!confirm("Anam a la quinta forca?")) {
+                if (!confirm("Anam a la quinta forca?, Vamos al quinto pino?,")) {
                     document.body.style.backgroundImage = "url('img/fondo1.png')";
                 document.body.style.display = "block";
             }
@@ -96,8 +97,6 @@
                   window.alert("has falldo");
                   lletres[7 - vidas] = lletra;
                   vidas = vidas - 1;
-                  
-            //cosas
                   mostrarimg();
                   document.getElementById("fallo").innerHTML = lletres;
                   document.getElementById("boom").play();
@@ -142,6 +141,7 @@
             function parartodo() {
                 document.getElementById("l").disabled = true;
                 document.getElementById("comprovar").disabled = true;
+                document.getElementById("pista").disabled = true;
             }
             
         //muestra las imagenes segun las vidas que queden
@@ -176,8 +176,8 @@
                    break; 
             }
         }
-        
         //muestra una pista
             function pistas() {
                 window.alert(pista);
             }
+

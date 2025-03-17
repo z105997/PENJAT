@@ -49,19 +49,19 @@ html {
     }
     
 #imagenes {
-    position: relative; top:-500px; left:330px;
+    position: relative; top:-470px; left:250px;
 }
 #banderas {
-    position: relative; top:-290px; left:318px;
+    position: relative; top:-295px; left:318px;
 }
 #flux {
-    position: relative; top:-300px; left:318px;
+    position: relative; top:-450px; left:318px;
 }
 #gato {
-    position: relative; top:-600px; left:330px;
+    position: relative; top:-570px; left:250px;
 }
 #citas2 {
-    position: relative; top:-81px; left:250px;
+    position: relative; top:-78px; left:250px;
 }
 #citas1 {
     position: relative; top:0px; left:-5px;
@@ -70,8 +70,21 @@ html {
     position: relative; top:-315px; left:100px;
 }
 #pista {
-    position: relative; top:-3px; left:10px;
+    position: relative; top:-3px; left:5px;
 }
 #Teclat {
-    position: fixed; top: 0px; left:100px;
+    position: fixed; top: 111px; left:362px;
 }
+#palabra {
+    color: #ffffff;
+    text-shadow: 2px 2px 4px #000000;
+}
+#vidas {
+    color: #ffffff;
+    text-shadow: 2px 2px 4px #000000;
+}
+#fallo {
+    color: #ffffff;
+    text-shadow: 2px 2px 4px #000000;
+}
+

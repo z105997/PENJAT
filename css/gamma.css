@@ -1,0 +1,90 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this template
+*/
+/* 
+    Created on : 27 de gen. 2025, 14:41:07
+    Author     : aula1PTD1
+*/
+html {
+        background:#222;
+        margin:0;
+        width:640px;
+        height:480px;
+    }
+
+    body {
+        background:linear-gradient(#aaa 0, #ddd 10px, #fff 55px);
+        border:1px solid black;
+        padding:10px 20px;
+        box-shadow:5px 0px 30px #000;
+        border-radius:8px;
+        margin:0;
+        width:640px;
+        height:480px;
+    }
+
+    h2 {
+        color: white;
+        text-shadow: 2px 2px 4px #000000;
+    }
+    
+    h1, a {
+        background: linear-gradient(#aaa 0, #ddd 10px, #fff 55px);
+        border: 1px solid black;
+        padding: 1px 1px;
+        box-shadow: 5px 0px 30x #000;
+        border-radius: 8px;
+        text-align: center;
+        max-width: 600px;
+    }
+    
+    h4 {
+        color: black;
+    }
+    
+    h3 {
+        color: white;
+        text-shadow: 2px 2px 4px #000000;
+    }
+    
+#imagenes {
+    position: relative; top:-470px; left:250px;
+}
+#banderas {
+    position: relative; top:-295px; left:318px;
+}
+#flux {
+    position: relative; top:-450px; left:318px;
+}
+#gato {
+    position: relative; top:-570px; left:250px;
+}
+#citas2 {
+    position: relative; top:-78px; left:250px;
+}
+#citas1 {
+    position: relative; top:0px; left:-5px;
+}
+#counter {
+    position: relative; top:-315px; left:100px;
+}
+#pista {
+    position: relative; top:-3px; left:5px;
+}
+#Teclat {
+    position: fixed; top: 111px; left:362px;
+}
+#palabra {
+    color: #ffffff;
+    text-shadow: 2px 2px 4px #000000;
+}
+#vidas {
+    color: #ffffff;
+    text-shadow: 2px 2px 4px #000000;
+}
+#fallo {
+    color: #ffffff;
+    text-shadow: 2px 2px 4px #000000;
+}
+

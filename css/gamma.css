@@ -52,7 +52,7 @@ html {
     position: relative; top:-470px; left:250px;
 }
 #banderas {
-    position: relative; top:-295px; left:318px;
+    position: relative; top:-280px; left:318px;
 }
 #flux {
     position: relative; top:-450px; left:318px;
@@ -73,7 +73,7 @@ html {
     position: relative; top:-3px; left:5px;
 }
 #Teclat {
-    position: fixed; top: 111px; left:362px;
+    position: fixed; top: 130px; left:362px;
 }
 #palabra {
     color: #ffffff;
@@ -87,4 +87,5 @@ html {
     color: #ffffff;
     text-shadow: 2px 2px 4px #000000;
 }
+
 

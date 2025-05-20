@@ -20,23 +20,27 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
             placeholder="Escriu una lletra en minusculees"> 
             <button type="button" id="comprovar" onclick="limpiador();"> Comprovar</button>
         </form>
-        <div id="1rcol">
-            <h2>PARAULA<a id="sop" href="https://prosselloe.wordpress.com/2015/05/16/vols-sopes-en-record-dels-nostres-padrins/">Demanam Sopes?</a><button type="button" id="pista" onclick="pistas();"> Pista</button></h2>
+        <h2>
+            <span id="p1">Paraula:</span>
+            <span><a id="sop" href="https://prosselloe.wordpress.com/2015/05/16/vols-sopes-en-record-dels-nostres-padrins/">Demanam Sopes?</a><button type="button" id="pista" onclick="pistas();"> Pista</button></span>
+            </h2>
             <div id="palabra">_ _ _ _ _ _ _&nbsp</div>
-        </div>
-        <div id="2rcol">
-            <h2>VIDES<a href="https://pccd.dites.cat/p/Tenir_set_vides%2C_com_els_gats">Un moix en té set??</a></h2>
+        <h2>
+            <span id="v1">Vides:</span>
+            <span><a id="mix" href="https://pccd.dites.cat/p/Tenir_set_vides%2C_com_els_gats">Un moix en té set??</a></span>
+            </h2>
             <div id="vidas">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp_</div>
-        </div>
-        <div id="3rcol">
-            <h2>LLETRES<a href="https://pccd.dites.cat/p/De_lletres">Ets de lletres?</a></h2>
+        <h2>
+            <span id="l1">Lletres:</span>
+            <span><a id="ets" href="https://pccd.dites.cat/p/De_lletres">Ets de lletres?</a></span>
+        </h2>
             <div id="fallo">_ _ _ _ _ _ _</div>
-        </div>
+        
         <div id="banderas">
             <img id="es" src="img/es.png" alt="esp" onclick="cambiar('es')"/>
             <img id="ca" src="img/ca.png" alt="cat" onclick="cambiar('ca')"/>
             <img id="fr" src="img/fr.png" alt="fr" onclick="cambiar('fr')"/>
-            <img id="gb" src="img/gb.png" alt="gb" onclick="cambiar('gb')"/>
+            <img id="gb" src="img/gb.png" alt="gb" onclick="cambiar('en')"/>
             <img id="it" src="img/it.png" alt="it" onclick="cambiar('it')"/>
             <img id="de" src="img/de.png" alt="de" onclick="cambiar('de')"/>
             <button type="button" id="teclado" onclick="document.getElementById('Teclat').hidden = 

@@ -358,8 +358,7 @@
             
 // Canviam els diferents literals de la GUI segons l'idioma
     function cambiar(IdIdioma) {
-
-
+        
         Idioma = Idiomes.find(Idioma => Idioma.IdIdioma == IdIdioma);
        
         document.title = Idioma.Titol;
@@ -369,9 +368,9 @@
         document.getElementById("p1").innerHTML = Idioma.Paraula;
         document.getElementById("sop").innerHTML = Idioma.Sopes;
         document.getElementById("pista").innerHTML = Idioma.Pista;        
-        document.getElementById("Vides").innerHTML = Idioma.Vides;
-        document.getElementById("Moix").innerHTML = Idioma.Moix;
-        document.getElementById("Lletres").innerHTML = Idioma.Lletres;
+        document.getElementById("v1").innerHTML = Idioma.Vides;
+        document.getElementById("mix").innerHTML = Idioma.Moix;
+        document.getElementById("l1").innerHTML = Idioma.Lletres;
        
 
         // Escull una nova paraula aleatòriament

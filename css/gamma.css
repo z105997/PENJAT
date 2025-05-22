@@ -50,6 +50,7 @@ html {
     
 #imagenes {
     position: relative; top:-470px; left:250px;
+    border-radius: 8px;
 }
 #banderas {
     position: relative; top:-280px; left:318px;

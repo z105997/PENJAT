@@ -17,5 +17,17 @@ section {
 	margin: 50px auto;
 	padding: 20px;
         text-align: center;
+        border-radius: 15px;
 }
+
+#paloma {
+        border-radius: 8px;
+}
+
+h4 {
+        text-align: center;
+}
+
+
+
 

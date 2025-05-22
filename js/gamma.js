@@ -268,7 +268,7 @@
             }else { if (lletres.indexOf(lletra) !== -1) {
                   window.alert(Idioma.Repetida);
               }else { 
-                  window.alert(Idioma.Incorrecte);
+                  window.alert(Idioma.Fallat);
                   lletres[7 - vidas] = lletra;
                   vidas = vidas - 1;
                   mostrarimg();
@@ -280,7 +280,7 @@
                 }
         //en caso de que el caracter no seqa valido
             }else{
-                window.alert("no válido");
+                window.alert(Idioma.Incorrecte);
             }
                 
         //termina el juego segun si ganas

@@ -170,6 +170,16 @@
         //    [], function(idiomes) {Print_Data(Idiomes = idiomes.pop());}
             [], function(idiomes) {SQL_TblTextosGUI(IdIdioma, idiomes.pop());}
         );
+
+        //cosa muy rara
+        alasql('ATTACH SQLITE DATABASE penjat("db/penjat.db"); USE penjat; \n\
+                SELECT Paraula, Pista \n\
+                FROM TblParaules INNER JOIN TblPistes \n\
+                ON TblParaules INNER JOIN TblPistes.IdPista \n\
+                WHERE TblParaules.IdIdioma = "' + IdIdioma +'";',
+            [], function(taula) {Print_Data(Taula = taula.pop());}
+          //  [], function(taula) {SQL_TblParaulesPistes(IdIdioma, taula.pop());}
+        );        
     }
     
         // Print data  
@@ -376,4 +386,5 @@
         // Escull una nova paraula aleatòriament
         window.alert("Nova paraula aleatòria / Nueva palabra aleatoria / New random word!");
         // window.alert("[" + paraula + "]=[" + pista + "]");
+        
     }

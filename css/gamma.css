@@ -11,6 +11,7 @@ html {
         margin:0;
         width:640px;
         height:480px;
+        position: relative; left: 576px;
     }
 
     body {
@@ -89,7 +90,4 @@ html {
     text-shadow: 2px 2px 4px #000000;
 }
 
-#eaeg {
-    position: relative; top:15000000px; left:15000000px;
-} 
 
